@@ -5,7 +5,16 @@ body{
 }
 
 header{
+    display: flex;
+    flex-direction: row;
     background-color: #4D056F;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hamb{
+    width: 45px;
+    height: 45px;
 }
 
 .titreheader{
@@ -16,7 +25,7 @@ header{
 	display: inline-block;
 	position: relative;
 	width: 70px;
-	height: 40px;
+	height: 45px;
 	cursor: pointer;
 	overflow: hidden;
 }
@@ -59,4 +68,9 @@ header{
 
 .toggleswitch input:checked + span:before {
 	left: 34px;
+}
+
+.JourNuit{
+    width: 45px;
+    height: 45px;
 }

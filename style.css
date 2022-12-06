@@ -1,7 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     background-color: black;
     max-width: 430px;
     max-height: 940px;
+    overflow: hidden;
 }
 
 header{
@@ -25,7 +30,7 @@ header{
 	display: inline-block;
 	position: relative;
 	width: 70px;
-	height: 45px;
+	height: 40px;
 	cursor: pointer;
 	overflow: hidden;
 }
@@ -74,3 +79,35 @@ header{
     width: 45px;
     height: 45px;
 }
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+}
+
+.pres{
+    color: white;
+    text-align: center;
+}
+
+.courpres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label:not(.toggleswitch) {
+	background: #B110FD;
+	color: #fff;
+	transition: transform 400ms ease-out;
+	display: inline-block;
+    min-height: 100%;
+	width: 420px;
+	height: 600px;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	line-height: 100vh;
+}
+

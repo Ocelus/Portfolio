@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
     justify-content: center;
+    margin: auto;
 }
 
 body{
@@ -18,6 +18,7 @@ header{
     background-color: #4D056F;
     justify-content: space-around;
     align-items: center;
+    width: 430px;
 }
 
 .hamb{
@@ -39,7 +40,6 @@ header{
 }
 
 .toggleswitch input {
-	position: absolute;
 	top: -30px;
 	left: -30px;
 	width: 0;
@@ -48,12 +48,12 @@ header{
 
 .toggleswitch input + span {
     position: absolute;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   background: #B110FD;
-   border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #B110FD;
+    border-radius: 20px;
 }
 
 .toggleswitch input:checked + span {
@@ -87,6 +87,7 @@ header{
     width: 100px;
     height: 100px;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .pres{
@@ -107,23 +108,19 @@ label:not(.toggleswitch) {
 	transition: transform 400ms ease-out;
 	display: inline-block;
     min-height: 100%;
-	max-width: 80px;
-	max-height: 150px;
+	width: 100vw;
+	height: 100px;
 	position: relative;
 	z-index: 1;
 	text-align: center;
 	line-height: 100px;
     margin: 10px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.carrou{
-    display: flex;
-    flex-direction: column;
-}
 
 form {
-    display: flex;
-    flex-direction: row;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -138,11 +135,15 @@ form {
 	bottom: 0;
 	left: 0;
 	right: 0;
+    padding: 1rem;
 	color: #fff;
 	text-align: center;
 	transition: all 300ms linear;
 	opacity: 0;
 }
+
+
+
 
 input:focus ~ .keys {
 	opacity: 0.8;
@@ -177,23 +178,20 @@ input:nth-of-type(4):checked ~ label {
 
 label:not(.toggleswitch) {
 	background: #B110FD;
-	background-size: auto;
+    background-image: url(assets/kcworkinprogress.png);
+	background-size: contain;
+    background-repeat: no-repeat;
 	font-size: 20px;
 }
 
-label[for="proj4"],
-label[for="proj2"] {
-	background: #B110FD;
-}
-
-label[for="proj1"]:before,
-label[for="proj4"]:after {
+label:before,
+label:after {
 	color: white;
 	display: block;
 	background: rgba(255,255,255,0.2);
 	position: absolute;
-	padding: 15px;
-	font-size: 20px;
+	padding: 10px;
+	font-size: 10px;
 	height: 20px;
 	vertical-align: middle;
 	line-height: 20px;
@@ -202,17 +200,27 @@ label[for="proj4"]:after {
 	cursor: pointer;
 }
 
-label[for="proj1"]:before {
+label:before {
 	content: "\276C";
 	right: 100%;
-	border-top-left-radius: 45%;
-	border-bottom-left-radius: 45%;
+	border-top-left-radius: 40%;
+	border-bottom-left-radius: 40%;
 }
 
-label[for="proj4"]:after {
+label:after {
 	content: "\276D";
 	left: 100%;
-	border-top-right-radius: 45%;
-	border-bottom-right-radius: 45%;
+	border-top-right-radius: 40%;
+	border-bottom-right-radius: 40%;
+}
+
+footer{
+    margin-top: 80px;
+}
+
+.imgfoot{
+    width: 45px;
+    height: 45px;
+    filter: invert(100%);
 }
 
